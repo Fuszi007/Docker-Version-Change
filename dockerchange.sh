@@ -12,7 +12,7 @@ sudo apt-get install -y > /dev/null \
     lsb-release
 FILE=/usr/share/keyrings/docker-archive-keyring.gpg
 if [ -f "$FILE" ]; then
-    yes | rm -rf /usr/share/keyrings/docker-archive-keyring.gpg > /dev/null
+    yes | sudo rm -rf /usr/share/keyrings/docker-archive-keyring.gpg > /dev/null
 fi
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg  > /dev/null
